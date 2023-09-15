@@ -1,0 +1,26 @@
+
+
+/* ====================================================================================
+EXERCISE CARD
+==================================================================================== */
+.ex-card{
+    position: relative;
+    border-radius: var(--size-p);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+.ex-card .img-box{
+    width: 100%;
+}
+
+.ex-card .info-box{
+    padding: .5rem;
+}
+.ex-card .body-part,
+.ex-card .target{
+    font-size: var(--fs-t);
+}
+.ex-card .name{
+    font-weight: bold;
+    color: var(--p);
+}

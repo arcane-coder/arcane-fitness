@@ -1,0 +1,210 @@
+header {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+header .nav-bar {
+    position: relative;
+    padding: .5rem 0;
+    margin: auto;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header .logo-box {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5rem;
+}
+
+header .logo-box svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: var(--p);
+}
+
+header .link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+header ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--p);
+    transition: .3s;
+}
+
+header ul li:hover::after {
+    width: 100%;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--text-balance);
+    transition: color .3s;
+}
+
+header ul li a:hover {
+    color: var(--light);
+}
+
+header .search-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-light);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+}
+
+header .search-box .icon {
+    color: var(--text-balance);
+}
+
+header .search-box input {
+    background: transparent;
+    color: var(--light);
+    width: 7rem;
+}
+
+header .search-box:focus-within {
+    outline: 2px solid var(--border-p);
+    border-radius: 2rem;
+}
+
+header .ham-box {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+header .ham-box svg {
+    width: 100%;
+    height: 100%;
+    color: var(--text-balance);
+}
+
+header .ham-box:hover svg {
+    color: var(--light);
+}
+
+
+
+/* -----------------------Theme Button  */
+/* header label {
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 32px;
+    cursor: pointer;
+}
+
+header label input {
+    position: relative;
+    appearance: none;
+}
+
+header label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    transition: .3s;
+    border: 2px solid var(--light);
+    transition: .3s ease-in-out;
+}
+
+header span i {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 24px;
+    width: 24px;
+    border-radius: 3rem;
+    background: var(--light);
+    transition: all .3s ease-in-out;
+}
+
+header label span i::before,
+header label span i::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+header label span i::before {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-light);
+    border-radius: 3rem;
+}
+
+header label span i::after {
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px dashed var(--bg);
+}
+
+header input:checked~span i {
+    left: 34px;
+}
+
+header input:checked~span i::after {
+    top: 2px;
+    left: 8px;
+    width: 14px;
+    height: 14px;
+    border: transparent;
+    background: var(--light);
+} */
+
+
+
+
+/* Target screens with a minimum width of 768 pixels and a maximum of 1023 pixels */
+@media (max-width: 768px) {
+    header .ham-box {
+        display: block;
+    }
+
+    header .link-box.none {
+        display: none;
+    }
+
+    header .link-box.flex {
+        padding-block: 1rem;
+        align-items: start;
+        flex-direction: column;
+    }
+
+}

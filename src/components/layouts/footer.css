@@ -1,0 +1,151 @@
+/* ===============================
+Styleing of Footer
+=============================== */
+footer {
+    padding: 3rem 5%;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .wrapper-box {
+    padding: 1rem;
+    width: 30%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    flex: 1 0 14rem;
+}
+
+/* First Box  */
+footer .info-box {
+    margin-bottom: 1rem;
+}
+footer .info-box .name{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+footer .info-box .name span{
+    font-size: 2rem;
+    font-family: var(--lora);
+}
+
+footer .info-box .svg-box {
+    width: 3rem;
+    height: 3rem;
+}
+
+footer .info-box .svg-box svg {
+    width: 100%;
+    height: 100%;
+}
+
+footer .info-box .detail {
+    font-size: 1rem;
+    color: var(--text-balance);
+}
+
+footer .social-box {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+footer .social-box .svg-box {
+    padding: .5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer .social-box .svg-box svg {
+    width: 100%;
+    height: 100%;
+    color: var(--light);
+}
+
+footer .social-box .svg-box:hover {
+    background: var(--light);
+}
+
+footer .social-box .svg-box:hover svg {
+    color: var(--dark);
+}
+
+footer .first button {
+    background: var(--bg);
+    color: var(--light);
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+
+/* Second Box  */
+footer .second {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .second .title {
+    font-family: var(--lora);
+    margin-bottom: 1rem;
+}
+
+footer .second li {
+    color: var(--text-balance);
+}
+footer .second li:hover {
+    color: var(--light);
+    cursor: pointer;
+}
+
+
+/* Second Box  */
+footer .third {
+    display: flex;
+    flex-direction: column;
+}
+footer .third .subs{
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .third .subs p{
+    font-size: 1.5rem;
+    font-family: var(--lora);
+}
+footer .third .subs label{
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+}
+footer .third .subs label input{
+    width: 100%;
+    padding-inline: 1rem;
+    height: 2rem;
+}
+footer .third .subs label button{
+    padding-inline: 1rem;
+    height: 2rem;
+    border-radius: 0;
+    background: var(--p);
+}
+
+footer .third .legal{
+    text-align: center;
+}
+footer .third .legal p{
+    font-size: .875rem;
+    color: var(--text-balance);
+}
+footer .third .legal p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

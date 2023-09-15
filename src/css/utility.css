@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #ed252f;
+    --red-light: #ff9595;
+    --red-dark: #920000;
+    --blue: #0365FF;
+    --blue-light: #8F95FF;
+    --blue-dark: #000888;
+    --green: #24e138;
+    --green-light: #bbffcc;
+    --green-dark: #004800;
+    --yellow: #e6ea0c;
+    --yellow-light: #feffbf;
+    --yellow-dark: #656200;
+
+    /* Foreever colour  */
+    --f-white: #FFFFFA;
+    --f-black: #02040F;
+    --f-light: #E2E0Eb;
+    --f-dark: #202020;
+    --f-text-light: hsl(0, 0%, 80%);
+    --f-text-dark: hsl(0, 0%, 20%);
+    --f-gray: #AAAAAA;
+    --f-gray-light: #DDDDDD;
+    --f-gray-dark: #909090;
+
+    --p-primary: #4D50F4;
+    --p-primary-light: #8183F6;
+    --p-primary-dark: #0a0c86;
+    --p-safe: #36d94c;
+    --p-safe-light: #9CF3A7;
+    --p-safe-dark: #088318;
+    --p-denger: #DF303A;
+    --p-denger-light: #ED8B90;
+    --p-denger-light: #7b070d;
+
+    --grey-1: #F9FAfB;
+    --grey-2: #F3F4F6;
+    --grey-3: #E5E7EB;
+    --grey-4: #D1D5DB;
+    --grey-5: #9CA3AF;
+    --grey-6: #6B7280;
+    --grey-7: #4B5563;
+    --grey-8: #374151;
+    --grey-9: #1F2937;
+    --grey-10: #111827;
+    --grey-11: #030712;
+
+    /* theme colour  */
+    --white: #FFFFFA;
+    --black: #02040F;
+    /* --light: hsl(251, 22%, 70%); */
+    --light: #E2E0Eb;
+    --dark: #202020;
+
+    /* Border  */
+    --border: #4d4d4d;
+    --border-p: #7a9fbd;
+    --border-f: #06b6d4;
+    --border-s: #374151;
+    --border-t: #374151;
+
+    /* Text */
+    --text: #F0EFF5;
+    --text-balance: hsl(0, 0%, 80%);
+
+    /* Background */
+    --bg: #1b1a1d;
+    --bg-light: #040D12;
+    --bg-dark: hsl(0, 0%, 15%);
+
+    /* Theme */
+    --p: #d90606;
+    --s: #152920;
+    --a: #F4D160;
+    --a: #caced1;
+
+    /* Theme Extras  */
+    /* --p: #1CD8B2; */
+    --p-light: #28ffd8;
+    --p-dark: #066653;
+    --p-light-extra: #CEF6EF;
+    --p-shade1: #7DF5DD;
+    --p-shade2: #4DF3D2;
+    --p-shade3: #00EABC;
+    --p-shade4: #00C49E;
+
+    /* Invert  */
+    --invert-bg: #fafafa;
+    --invert-bg-dark: #cccccc;
+    --invert-bg-light: #e6e6e6;
+
+
+    /* Google Fonts  */
+    --mont: 'Montserrat', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --lora: 'Lora', sans-serif;
+    --sans: sans-serif;
+    /* --nunito: 'Nunito', sans-serif; */
+    /* --prompt: 'Prompt', sans-serif; */
+    /* --lato: 'Lato', sans-serif; */
+    /* --poppins: 'Poppins', sans-serif; */
+
+    /* Text Sizes  */
+    --fs-p: clamp(14px, 2vw, 16px);
+    --fs-s: clamp(12px, 2vw, 14px);
+    --fs-t: 10px;
+    --fs-l: clamp(16px, 2vw, 18px);
+    --fs-xl: clamp(18px, 2vw, 20px);
+    --fs-xxl: clamp(20px, 2vw, 22px);
+
+    --fs-h1: clamp(2.5rem, 5vw, 3rem);
+    --fs-h2: clamp(2rem, 5vw, 2.5rem);
+    --fs-h3: clamp(1.7rem, 5vw, 2rem);
+    --fs-h4: clamp(1.3rem, 5vw, 1.7rem);
+    --fs-h5: clamp(1rem, 5vw, 1.3rem);
+    --fs-h6: clamp(0.8rem, 5vw, 1rem);
+
+    --shadow-p: 0 0 6px #30303050;
+
+    --size-p: 4px;
+    --size-s: 8px;
+    --size-t: 12px;
+    --size-q: 16px;
+
+    --btn-pad-p: .5rem 1rem;
+    --btn-pad-p: 4px 8px;
+}
+
+/* ===============================================
+Reset Default
+=============================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    scroll-behavior: smooth;
+    font-family: var(--inter), sans-serif;
+}
+
+button,
+input,
+textarea {
+    accent-color: var(--border-fa);
+    position: relative;
+    outline: transparent;
+    border: transparent;
+    font-family: var(--inter);
+    font-weight: 300;
+    font-size: var(--font-size-p);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    outline: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* a:focus {
+    font-weight: bold;
+    letter-spacing: 1px;
+} */
+
+a:focus,
+button:focus {
+    border-radius: var(--size-p);
+    outline: 2px solid var(--border-f);
+}
+
+button:focus:hover {
+    outline-offset: 0;
+}
+
+
+/* ===================================================
+Custom Buttons
+=================================================== */
+.btn {
+    position: relative;
+    padding: 4px 8px;
+    width: fit-content;
+    height: fit-content;
+    font-style: var(--fs-p);
+    cursor: pointer;
+    border-radius: 4px;
+    transition:
+        transform .1s ease,
+        font-weight .1s ease,
+        letter-spacing .1s ease,
+        outline-offset .1s ease,
+        background .1s ease,
+        color .1s ease;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn:hover {
+    outline-offset: 2px;
+}
+
+.btn-p {
+    color: var(--light);
+    background: var(--p);
+    outline: 2px solid var(--p);
+    font-weight: 600;
+}
+
+.btn-s {
+    color: var(--dark);
+    background: var(--light);
+    /* outline: 2px solid var(--light); */
+}
+.btn-s:hover{
+    background: var(--white);
+}
+
+.btn-t {
+    background: transparent;
+    outline: 1px solid var(--light);
+    color: var(--light);
+}
+
+.btn-t:hover {
+    color: var(--dark);
+    background: var(--light);
+}
+
+.btn-q {
+    background: transparent;
+    outline: 1px solid var(--light);
+}
+
+.btn-danger {
+    background: var(--red-dark);
+    color: var(--light);
+}
+
+.btn-danger:hover {
+    background: var(--red);
+}
+
+/* ===================================================
+Custom Button Animation
+=================================================== */
+.btn-anmt-p {
+    outline: 2px solid var(--p);
+    z-index: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-anmt-p:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.btn-anmt-p:hover {
+    outline-offset: 2px;
+}
+
+.btn-anmt-p:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/* =================
+Animation
+================= */
+.pop-up {
+	-webkit-animation: pop-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: pop-up 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2023-9-12 16:54:32
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ @-webkit-keyframes pop-up {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pop-up {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+
+
+/* ===============================
+Images
+=============================== */
+.svg-box .icon,
+.svg-box svg,
+.icon-box svg,
+.img-box img,
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    transition: transform .5s ease;
+}
+
+/* ===============================
+Headings
+=============================== */
+h1 {
+    font-size: 3rem;
+    font-size: var(--fs-h1);
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: 2rem;
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: 1.7rem;
+    font-size: var(--fs-h4);
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-size: var(--fs-h5);
+}
+
+h6 {
+    font-size: 1rem;
+    font-size: var(--fs-h6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--mont);
+}
+
+p {
+    font-family: var(--inter);
+    color: var(--text-balance);
+    font-size: var(--font-size-p);
+    font-weight: 400;
+}
+
+
+
+/* ===============================
+Common Classes
+=============================== */
+.clr-p {
+    color: var(--p);
+}
+
+.text-grad {
+    font-size: 72px;
+    background: var(--p);
+    background: -webkit-linear-gradient(62deg, var(--p) 0%, var(--p-light) 50%, var(--p-dark) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.outline:hover {
+    outline: 2px solid var(--p);
+}
+
+.flex-space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* ===================================================
+[[[[[[[[[[[[[[[[[[[[[Media-Quary]]]]]]]]]]]]]]]]]]]]]
+=================================================== */
+/*  mobile LandScape / Tablet devices */
+@media (max-width: 767px) {}
+
+/*  mobile LandScape / Tablet devices  to Small-Screen Desktop */
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+/*  Small-Screen Desktop to Large Desktop Device*/
+@media (min-width: 1024px) and (max-width: 1439px) {}
+
+/*  For Large Desktop Device*/
+@media (min-width: 1440px) {}
