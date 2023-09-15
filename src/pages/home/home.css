@@ -21,58 +21,64 @@ HERO
     justify-content: center;
 }
 
-.hero .info-box{
+.hero .info-box {
     width: 80%;
     text-align: center;
-    text-shadow: -1px 2px 50px rgba(0,0,0,1);
+    text-shadow: -1px 2px 50px rgba(0, 0, 0, 1);
     border-radius: var(--size-p);
 }
+
 .hero h1,
-.hero p{
+.hero p {
     backdrop-filter: blur(1px);
 }
-.hero p{
+
+.hero p {
     margin-bottom: 2rem;
 }
-.hero .btn{
+
+.hero .btn {
     padding: 1rem;
 }
 
 /* ================================================================================
 SEARCH-EXERCISE
 =================================================================================*/
-.search-ex{
+.search-ex {
     display: flex;
     flex-direction: column;
 }
-.search-ex h1{
+
+.search-ex h1 {
     text-align: center;
     width: 60%;
 }
 
-.search-ex .section-heading{
+.search-ex .section-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.search-ex .input-box{
+.search-ex .input-box {
     margin: 1rem;
     display: flex;
     align-items: center;
 }
-.search-ex .input-box input{
+
+.search-ex .input-box input {
     padding: .5rem;
     height: 2rem;
     border-radius: 4px 0 0 4px;
 }
-.search-ex .input-box .btn{
+
+.search-ex .input-box .btn {
     height: 2rem;
     border-radius: 0 4px 4px 0;
 }
 
-.search-ex .category{
+.search-ex .category {
     margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +86,7 @@ SEARCH-EXERCISE
     /* grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr)); */
 }
 
-.search-ex .body-part-card{
+.search-ex .body-part-card {
     padding: .75rem;
     background: var(--bg-light);
     border-radius: var(--size-p);
@@ -88,36 +94,91 @@ SEARCH-EXERCISE
     cursor: pointer;
     transition: transform .3s ease;
 }
-.search-ex .body-part-card:hover{
+
+.search-ex .body-part-card:hover {
     transform: scale(1.1);
 }
-.search-ex .body-part-card:active{
+
+.search-ex .body-part-card:active {
     transform: scale(0.8);
 }
 
-.search-ex .show-ex{
+.search-ex .show-ex {
     margin: 1rem 0;
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 }
 
-.search-ex .btn-box{
+.search-ex .btn-box {
     align-self: flex-end;
     display: flex;
     gap: .5rem;
     justify-content: center;
     align-items: center;
 }
-.search-ex .btn:disabled{
+
+.search-ex .btn:disabled {
     cursor: no-drop;
     pointer-events: none;
 }
 
 
+/* ================================================================================
+BODY MASS INDEX
+==================================================================================*/
+.bmi {
+    background: var(--bg-light);
+}
+
+.bmi h1 {
+    width: 60%;
+}
+
+.bmi .result-box,
+.bmi .calc-box {
+    width: 60%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--bg);
+    border-radius: var(--size-s);
+
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bmi .calc-box label {
+    flex: 1 0 10rem;
+    margin-bottom: 1rem;
+}
+
+.bmi .calc-box p {
+    display: inline;
+    font-weight: bold;
+    font-size: var(--fs-l);
+}
+.bmi .calc-box .opt {
+    display: inline;
+    font-size: var(--fs-p);
+}
 
 
+.bmi .calc-box input {
+    width: 100%;
+    margin: .5rem 0;
+    padding: 1rem;
+    color: var(--light);
+    background: transparent;
+    border-radius: var(--size-p);
+    outline: 2px solid var(--p);
+}
 
+.bmi .calc-box .btn {
+    flex: 1 0 100%;
+    padding: .5rem;
+}
 
 
 
@@ -137,20 +198,34 @@ SEARCH-EXERCISE
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
 /*  mobile LandScape / Tablet devices */
 @media (max-width: 767px) {
-    .section-padding{
+    .section-padding {
         padding: 4rem;
     }
-    .section-margin{
+
+    .section-margin {
         margin: 4rem;
-    }   
+    }
+
+
+    /* ==============================================
+    BODY MASS INDEX
+    ============================================== */
+    .bmi h1 {
+        width: 100%;
+    }
+
+    .bmi .calc-box{
+        width: 100%;
+    }
 }
 
 /*  mobile */
 @media (max-width: 550px) {
-    .section-padding{
+    .section-padding {
         padding: 4rem 2rem;
     }
-    .section-margin{
+
+    .section-margin {
         margin: 4rem 2rem;
-    }   
+    }
 }

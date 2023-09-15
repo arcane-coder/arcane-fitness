@@ -68,7 +68,7 @@ export default function SearchExercise() {
         <section className="search-ex section-padding">
 
             <div className="section-heading">
-                <h1>Awsome Exercise you should know</h1>
+                <h1>Awsome <span className="clr-p"> Exercise</span> you should know</h1>
                 <label htmlFor="search-exercise" className="input-box">
                     <input type="text" id="search-exercise" name="search-exercise" value={searchValue} onChange={handleChange} placeholder="Search Exercise" />
                     <button onClick={handleSearch} className="btn btn-s" >Search</button>
