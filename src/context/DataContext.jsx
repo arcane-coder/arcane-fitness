@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { data } from "../utils/data"
 const DataContext = createContext();
 
@@ -9,7 +9,12 @@ export const DataProvider = ({ children }) => {
         const ex = data.filter(item => item.id === id);
         setExercise(ex)
     }
-    
+
+
+    useEffect(() => {
+        setExercise(data)
+        // console.log(data)
+    }, [])
 
     return (
         <DataContext.Provider value={{ setNewExercise, exercise }}>

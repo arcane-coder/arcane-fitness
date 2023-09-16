@@ -1,6 +1,6 @@
 import { useState } from 'react';
-// import { Link } from "react-router-dom";
-import { IarcaneCoder } from '../svgs/logo';
+import { Link } from "react-router-dom";
+import { IarcaneFitness } from '../svgs/logo';
 import { BsList } from "react-icons/bs";
 import './header.css'
 
@@ -12,10 +12,10 @@ export default function Header() {
         <>
             <header>
                 <nav className="nav-bar">
-                    <div className="logo-box"><IarcaneCoder /></div>
+                    <Link to='/' className='logo-container'><div className="logo-box"><IarcaneFitness /></div><span className="web-name">Arcane Fitness</span></Link>
                     <div className="ham-box" onClick={() => setIsNavbarOpen(!isNavbarOpen)}><BsList /></div>
                     <ul className={`link-box ${isNavbarOpen ? 'flex' : 'none'}`}>
-                        {/* <li><Link to="/">Home</Link></li> */}
+                        <li><Link to="/">Home</Link></li>
                         <li><a href='#search-ex'>Exercises</a></li>
                     </ul>
                 </nav>

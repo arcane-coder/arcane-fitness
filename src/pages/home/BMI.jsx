@@ -36,7 +36,7 @@ export default function BMI() {
 
                 {bmi !== null && bmi !== undefined && (
                     <div className="result-box">
-                        {isNaN(bmi) && <p className="warning">Please Enter valid numbers.</p>}
+                        {isNaN(bmi) && <p className="warning">Please Enter a valid numbers.</p>}
                         {!isNaN(bmi) &&
                             <>
                                 <p>The BMI of weight {weight}kg and height {height}m is found to be <b> {bmi} </b></p> <hr /> 

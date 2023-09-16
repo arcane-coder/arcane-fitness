@@ -21,6 +21,7 @@ EXERCISE CARD
     font-size: var(--fs-t);
 }
 .ex-card .name{
-    font-weight: bold;
     color: var(--p);
+    font-weight: bold;
+    text-transform: capitalize;
 }

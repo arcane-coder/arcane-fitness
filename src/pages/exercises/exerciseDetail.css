@@ -1,0 +1,83 @@
+/* =================================================================================
+EXERCISE DETAIL
+================================================================================= */
+.ex-detail {
+    display: flex;
+}
+
+.ex-detail .img-box {
+    width: 60%;
+    border-radius: var(--size-s);
+    overflow: hidden;
+}
+
+.ex-detail .info-box {
+    width: 40%;
+    padding: 2rem;
+}
+
+.ex-detail .info-box .group-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    gap: 1rem;
+}
+
+.ex-detail .info-box .name {
+    font-size: var(--fs-xl);
+    text-transform: capitalize;
+}
+
+.ex-detail .info-box .detail {
+    margin: 1rem 0;
+}
+
+.ex-detail .info-box .detail::first-letter {
+    text-transform: capitalize;
+}
+
+.ex-detail .info-box .group {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--size-s);
+}
+
+.ex-detail .info-box .group .icon-box {
+    padding: 1.3rem;
+    border-radius: 15rem;
+    background: var(--light);
+    aspect-ratio: 1/1;
+}
+
+.ex-detail .info-box .group p {
+    text-transform: capitalize;
+    margin-top: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+/* [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{Media Quary}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+/* Between Laptop and Tablet */
+@media (max-width: 992px) {
+    .ex-detail {
+        flex-direction: column;
+    }
+    .ex-detail .img-box {
+        width: 100%;
+    }
+
+    .ex-detail .info-box {
+        width: 100%;
+    }
+}

@@ -13,13 +13,26 @@ COMMON cLASSES
 HERO
 =================================================================================*/
 .hero {
+    position: relative;
     min-height: calc(100vh - 4rem);
     background: var(--bg-light);
-    background: url("./images/bg/2.jpg") no-repeat center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+.hero .carousel{
+    position: absolute;
+    width: 100vw;
+    min-height: calc(100vh - 4rem);
+    transition: left .3s ease;
+}
+.hero .carousel .img-box{
+    display: flex;
+    width: 100vw;
+}
+.hero .carousel img{
+    width: 100vw;
 }
 
 .hero .info-box {
@@ -246,7 +259,7 @@ BODY MASS INDEX
 /*  mobile */
 @media (max-width: 550px) {
     .section-padding {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
     }
 
     .section-margin {
