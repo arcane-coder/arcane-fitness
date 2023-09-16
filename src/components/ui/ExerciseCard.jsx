@@ -1,8 +1,13 @@
+import { useContext } from 'react'
 import './ui.css'
+import DataContext from '../../context/DataContext'
+import { Link } from 'react-router-dom';
 
-export default function ExerciseCard({ img, name, target, bodyPart, equipment }) {
+export default function ExerciseCard({ id, img, name, target, bodyPart, equipment }) {
+  const { setNewExercise } = useContext(DataContext);
+
   return (
-    <div className='ex-card'>
+    <Link to="./exercisedetail" className='ex-card' onClick={() => setNewExercise(id)}>
       <div className="img-box">
         <img src={img} alt={name} />
       </div>
@@ -14,6 +19,6 @@ export default function ExerciseCard({ img, name, target, bodyPart, equipment })
         <p className="name">{name}</p>
         {/* <p className="equipment">{equipment}</p> */}
       </div>
-    </div>
+    </Link>
   )
 }

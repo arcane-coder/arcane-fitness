@@ -1,17 +1,18 @@
 import { useState } from "react";
 
 export default function BMI() {
-    const [unit, setUnit] = useState({ weight: 0, height: 0 });
+    const [unit, setUnit] = useState({ weight: '', height: '' });
     const [height, setHeight] = useState(null);
     const [weight, setWeight] = useState(null);
     const [bmi, setBmi] = useState(null);
     const handleChange = (e) => setUnit({ ...unit, [e.target.name]: e.target.value });
 
     const handleCalculate = () => {
-        const bmi = unit?.weight / Math.pow(unit?.height, 2);
+        let bmi = unit?.weight / Math.pow(unit?.height, 2);
+        const formattedNumber = parseFloat(bmi.toFixed(2));
         setWeight(unit.weight)
         setHeight(unit.height)
-        setBmi(bmi);
+        setBmi(formattedNumber);
     }
 
     return (
@@ -33,12 +34,21 @@ export default function BMI() {
                     <button className="btn btn-p" onClick={handleCalculate}>CALCULATE</button>
                 </div>
 
-                {!isNaN(bmi) && bmi !== undefined && bmi !== null && (
+                {bmi !== null && bmi !== undefined && (
                     <div className="result-box">
-                        <p>
-                            The BMI of weight {weight}kg and height {height}m is found to
-                            be {bmi}
-                        </p>
+                        {isNaN(bmi) && <p className="warning">Please Enter valid numbers.</p>}
+                        {!isNaN(bmi) &&
+                            <>
+                                <p>The BMI of weight {weight}kg and height {height}m is found to be <b> {bmi} </b></p> <hr /> 
+                                <b>BMI Categories:</b>
+                                <p>
+                                    Underweight = less than 18.5 <br />
+                                    Normal weight = 18.5 to 24.9 <br />
+                                    Overweight = 25 to 29.9 <br />
+                                    Obesity = BMI of 30 or greater
+                                </p>
+                            </>
+                        }
                     </div>
                 )}
             </div>

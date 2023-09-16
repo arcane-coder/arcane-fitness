@@ -14,6 +14,7 @@ HERO
 =================================================================================*/
 .hero {
     min-height: calc(100vh - 4rem);
+    background: var(--bg-light);
     background: url("./images/bg/2.jpg") no-repeat center;
     background-size: cover;
     display: flex;
@@ -62,12 +63,19 @@ SEARCH-EXERCISE
 }
 
 .search-ex .input-box {
+    width: 50%;
     margin: 1rem;
     display: flex;
     align-items: center;
 }
 
+.search-ex .input-box:focus-within {
+    border-radius: var(--size-p);
+    outline: 2px solid var(--border-f);
+}
+
 .search-ex .input-box input {
+    width: 100%;
     padding: .5rem;
     height: 2rem;
     border-radius: 4px 0 0 4px;
@@ -180,6 +188,14 @@ BODY MASS INDEX
     padding: .5rem;
 }
 
+.bmi .result-box{
+    flex-direction: column;
+}
+
+.bmi .heading{
+    display: block;
+}
+
 
 
 
@@ -204,6 +220,14 @@ BODY MASS INDEX
 
     .section-margin {
         margin: 4rem;
+    }
+
+
+    /* ==============================================
+    Search Exercise
+    ============================================== */
+    .search-ex .input-box {
+        width: 100%;
     }
 
 

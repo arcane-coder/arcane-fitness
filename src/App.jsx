@@ -1,8 +1,8 @@
 import { Toaster } from "react-hot-toast"
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from "./pages/home/Home";
-import Exercises from "./pages/exercise/Exercises";
-import ExerciseDetail from "./pages/exercise/ExerciseDetail";
+import ExerciseDetail from "./pages/exercises/ExerciseDetail";
+import { DataProvider } from "./context/DataContext";
 
 const router = createBrowserRouter([
   {
@@ -10,12 +10,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/exercise",
-    element: <Exercises /> ,
-  },
-  {
-    path: "/exercise/:id",
-    element: <ExerciseDetail /> ,
+    path: "/exercisedetail",
+    element: <ExerciseDetail />,
   },
 ]);
 
@@ -26,9 +22,9 @@ function App() {
         position="bottom-left"
         reverseOrder={false}
       />
-      {/* <Header /> */}
-      <RouterProvider router={router} />
-      {/* <Footer /> */}
+      <DataProvider>
+        <RouterProvider router={router} />
+      </DataProvider>
     </>
   )
 }

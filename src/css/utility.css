@@ -412,6 +412,9 @@ Common Classes
 .clr-p {
     color: var(--p);
 }
+.warning {
+    color: var(--red-light);
+}
 
 .text-grad {
     font-size: 72px;

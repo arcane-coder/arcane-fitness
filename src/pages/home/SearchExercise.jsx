@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
-import { exerciseOption, fetchData } from "../../utils/FetchData";
+// import { exerciseOption, fetchData } from "../../utils/FetchData";
 import { data } from '../../utils/data'
 import ExerciseCard from "../../components/ui/ExerciseCard";
 
@@ -31,7 +31,6 @@ export default function SearchExercise() {
             // Convert the Set to an array (if needed)
             const uniqueBodyPartsArray = Array.from(uniqueBodyParts);
             setBodyParts(['all', ...uniqueBodyPartsArray])
-            console.log(bodyParts)
         }
         fetchExerciseData();
     }, [])
@@ -65,7 +64,7 @@ export default function SearchExercise() {
     }
 
     return (
-        <section className="search-ex section-padding">
+        <section id="search-ex" className="search-ex section-padding">
 
             <div className="section-heading">
                 <h1>Awsome <span className="clr-p"> Exercise</span> you should know</h1>
@@ -101,7 +100,7 @@ export default function SearchExercise() {
 
             <div className="show-ex">
                 {exercise !== '' ? exercise.map((ex) => {
-                    return <ExerciseCard key={ex.id + 1} img={ex.gifUrl} name={ex.name} target={ex.target} bodyPart={ex.bodyPart} equipment={ex.equipment} />
+                    return <ExerciseCard key={ex.id + 11} id={ex.id} img={ex.gifUrl} name={ex.name} target={ex.target} bodyPart={ex.bodyPart} equipment={ex.equipment} />
                 }) : setExercise(data)
                 }
             </div>
