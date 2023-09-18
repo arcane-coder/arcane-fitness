@@ -3,6 +3,7 @@ EXERCISE DETAIL
 ================================================================================= */
 .ex-detail {
     display: flex;
+    background: var(--bg-light);
 }
 
 .ex-detail .img-box {
@@ -57,6 +58,63 @@ EXERCISE DETAIL
 }
 
 
+/* =================================================================================
+Youtube Demo
+================================================================================= */
+/* =========================================================
+{{{{{{{{{{{{{{{{{{{{{{{{Project-CARD}}}}}}}}}}}}}}}}}}}}}}}}
+========================================================= */
+.yt-demo .yt-card {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.yt-demo .yt-card:hover {
+    outline: 2px solid var(--border-f);
+}
+
+.yt-demo .yt-card .faded-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yt-demo .yt-card:hover .faded-layer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+.yt-demo .yt-card .info-box {
+    position: absolute;
+    padding: .5rem 1rem;
+    width: 100%;
+    transition: bottom .3s;
+    bottom: -10rem;
+}
+
+.yt-demo .yt-card:hover .info-box {
+    bottom: 0;
+}
+
+.yt-demo .yt-card .info-box .title {
+    font-size: var(--fs-p);
+    color: var(--f-light);
+    font-weight: bold;
+}
+
+
+/* =================================================================================
+SIMILAR MUSCLE
+================================================================================= */
+
+
+/* =================================================================================
+SIMILAR EQUIPMENT
+================================================================================= */
 
 
 
@@ -69,10 +127,24 @@ EXERCISE DETAIL
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{Media Quary}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
 /* Between Laptop and Tablet */
+@media (max-width: 768px) {
+
+    /* project-card */
+    .yt-demo .yt-card .info-box {
+        bottom: 0rem;
+    }
+
+    .yt-demo .yt-card .faded-layer {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    }
+}
+
+/* Between Laptop and Tablet */
 @media (max-width: 992px) {
     .ex-detail {
         flex-direction: column;
     }
+
     .ex-detail .img-box {
         width: 100%;
     }

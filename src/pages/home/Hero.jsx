@@ -17,7 +17,7 @@ export default function Hero() {
                 const newLoop = prevLoop + 1;
                 return newLoop === 4 ? 0 : newLoop;
             });
-        }, 5000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -26,7 +26,7 @@ export default function Hero() {
     }, [loop]);
 
     return (
-        <div className="hero section-padding">
+        <section className="hero section-padding">
             <div className="carousel" ref={imgContainerRef}>
                 <div className="img-box">
                     <img src="./images/bg/1.jpg" alt="bg1" />
@@ -38,8 +38,7 @@ export default function Hero() {
             <div className="info-box">
                 <h1>BOOST YOUR <span className="clr-p">HEALTH</span> IN JUST FEW MONTHS WITH <span className="clr-p"> ARCANE FITNESS</span></h1>
                 <p>Arcane fitness is the online platform where you can find to do your Gym Exercise at home with just few equipment. Our goal is to help every to maintain their Physical health with proper guidence.</p>
-                <Link to="/exercise" className="btn btn-p">Browse Exercise</Link>
             </div>
-        </div>
+        </section>
     )
 }

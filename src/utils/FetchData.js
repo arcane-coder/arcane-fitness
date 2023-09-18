@@ -13,3 +13,11 @@ export const fetchData = async (url, options) => {
     const data = await response.json();
     return data
 }
+
+export const ytOptions = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '0ecc1688d4msh8047abf4ad2070fp1ea69djsndc7e52396315',
+        'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
+    }
+};

@@ -5,7 +5,6 @@ import { BsList } from "react-icons/bs";
 import './header.css'
 
 export default function Header() {
-    //Toggle Nav-bar / Header
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     return (

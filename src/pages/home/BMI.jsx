@@ -16,7 +16,7 @@ export default function BMI() {
     }
 
     return (
-        <div className="bmi section-padding">
+        <section className="bmi section-padding">
             <div className="section-heading">
                 <h1>Calculate your <span className="clr-p">Body Mass Indes</span> in just few clicks</h1>
             </div>
@@ -52,6 +52,6 @@ export default function BMI() {
                     </div>
                 )}
             </div>
-        </div>
+        </section>
     )
 }

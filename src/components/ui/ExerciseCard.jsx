@@ -1,23 +1,27 @@
-import { useContext } from 'react'
 import './ui.css'
-import DataContext from '../../context/DataContext'
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-export default function ExerciseCard({ id, img, name, target, bodyPart, equipment }) {
-  const { setNewExercise } = useContext(DataContext);
+
+
+export default function ExerciseCard({ exercise }) {
+  const { id, gifUrl, name, target, bodyPart } = exercise;
+  let location = useLocation();
+  const containsExercisedetail = location.pathname.includes("exercisedetail");
 
   return (
-    <Link to="./exercisedetail" className='ex-card' onClick={() => setNewExercise(id)}>
-      <div className="img-box">
-        <img src={img} alt={name} />
-      </div>
-      <div className="info-box">
-        <div className="flex-space">
-          <p className="body-part">{bodyPart}</p>
-          <p className="target">{target}</p>
+    <Link to={`/exercisedetail/${id}`}>
+      <div className='ex-card outline-f'>
+        <div className="img-box">
+          <img src={containsExercisedetail ? `.${gifUrl}` : gifUrl} alt={name} />
         </div>
-        <p className="name">{name}</p>
-        {/* <p className="equipment">{equipment}</p> */}
+        <div className="info-box">
+          <div className="flex-space">
+            <p className="body-part">{bodyPart}</p>
+            <p className="target">{target}</p>
+          </div>
+          <p className="name">{name}</p>
+        </div>
       </div>
     </Link>
   )

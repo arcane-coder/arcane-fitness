@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
 // import { exerciseOption, fetchData } from "../../utils/FetchData";
-import { data } from '../../utils/data'
+import { data } from '../../data/data'
 import ExerciseCard from "../../components/ui/ExerciseCard";
 
 export default function SearchExercise() {
@@ -83,7 +82,6 @@ export default function SearchExercise() {
                 }
             </div>
 
-
             <div className="btn-box">
                 <button
                     className="btn btn-t"
@@ -98,9 +96,9 @@ export default function SearchExercise() {
                 >Next</button>
             </div>
 
-            <div className="show-ex">
+            <div className="show-ex card-container">
                 {exercise !== '' ? exercise.map((ex) => {
-                    return <ExerciseCard key={ex.id + 11} id={ex.id} img={ex.gifUrl} name={ex.name} target={ex.target} bodyPart={ex.bodyPart} equipment={ex.equipment} />
+                    return <ExerciseCard key={ex.id + 11} exercise={ex} />
                 }) : setExercise(data)
                 }
             </div>
